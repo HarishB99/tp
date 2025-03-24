@@ -44,9 +44,9 @@ public class RemarkCommandParserTest {
                 RemarkCommand.MESSAGE_USAGE);
 
         // no parameters
-        assertParseFailure(parser, RemarkCommand.COMMAND_WORD, expectedMessage);
+        assertParseFailure(parser, "", expectedMessage);
 
         // no index
-        assertParseFailure(parser, RemarkCommand.COMMAND_WORD + " " + nonEmptyRemark, expectedMessage);
+        assertParseFailure(parser, " " + PREFIX_REMARK + nonEmptyRemark, expectedMessage);
     }
 }
